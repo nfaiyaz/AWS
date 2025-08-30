@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Todo List</title>
+  </head>
+  <body>
+    <h1>todos</h1>
+    <form id="form">
+      <input
+        type="text"
+        class="input"
+        id="input"
+        placeholder="Enter your todo"
+        autocomplete="off"
+      />
+
+      <ul class="todos" id="todos"></ul>
+    </form>
+    <small
+      >Left click to toggle completed. <br />
+      Right click to delete todo</small
+    >
+    <button class="fab" id="addBtn">+</button>
+
+    <!-- FAB Options -->
+    <div class="fab-options" id="fabOptions">
+      <button id="addNoteBtn">➕ Add new note</button>
+      <button id="viewNotesBtn">📖 See previous notes</button>
+    </div>
+
+    <!-- Note Editor Modal -->
+    <div class="modal hidden" id="noteModal">
+      <div class="modal-content">
+        <textarea
+          id="noteInput"
+          placeholder="Write your note here..."
+        ></textarea>
+        <div class="modal-actions">
+          <button id="saveNoteBtn">💾 Save</button>
+          <button id="deleteNoteBtn">🗑 Delete</button>
+          <button id="closeModalBtn">✖ Close</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Notes Container -->
+    <div id="notesContainer" class="notes-container"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
